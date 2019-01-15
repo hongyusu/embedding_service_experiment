@@ -38,8 +38,8 @@ class Worker(Process):
         self.logger.info('terminated!')
 
     def get_estimator(self, tf):
-        from .temp import Estimator
-        from .temp import EstimatorSpec
+        from .Estimator import Estimator
+        from .Estimator import EstimatorSpec
 
         def model_fn(features, labels, mode, params):
             with tf.gfile.GFile(self.graph_path, 'rb') as f:

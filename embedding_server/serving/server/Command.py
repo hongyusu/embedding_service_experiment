@@ -8,6 +8,5 @@ class Command:
 
     @staticmethod
     def is_valid(cmd):
+        print(vars(Command).items())
         return any(not k.startswith('__') and v == cmd for k, v in vars(Command).items())
-
-
